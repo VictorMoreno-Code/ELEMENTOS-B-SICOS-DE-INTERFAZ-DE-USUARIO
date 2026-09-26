@@ -1,0 +1,30 @@
+name: uivision_flutter
+description: "UIvision Flutter: catálogo interactivo de elementos de interfaz de usuario."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Textos de los selectores de fecha y hora en español
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Imagen local de la Sección 5
+  assets:
+    - assets/img_catalogo.jpg
