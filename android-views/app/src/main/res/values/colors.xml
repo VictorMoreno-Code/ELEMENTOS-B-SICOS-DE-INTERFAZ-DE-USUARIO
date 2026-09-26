@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta blanquiazul: tema claro -->
+    <color name="azul_primario">#0B57D0</color>
+    <color name="azul_sobre_primario">#FFFFFF</color>
+    <color name="azul_contenedor">#D3E3FD</color>
+    <color name="azul_sobre_contenedor">#041E49</color>
+    <color name="celeste">#0288D1</color>
+    <color name="celeste_sobre">#FFFFFF</color>
+    <color name="celeste_contenedor">#C9EBFF</color>
+    <color name="celeste_sobre_contenedor">#002B45</color>
+    <color name="indigo">#4C6EF5</color>
+    <color name="indigo_sobre">#FFFFFF</color>
+    <color name="indigo_contenedor">#DDE4FF</color>
+    <color name="indigo_sobre_contenedor">#0A1F6B</color>
+    <color name="fondo">#F5F9FF</color>
+    <color name="sobre_fondo">#10203A</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="sobre_superficie">#10203A</color>
+    <color name="superficie_variante">#E1E9F5</color>
+    <color name="sobre_superficie_variante">#44546F</color>
+    <color name="borde">#74839C</color>
+    <color name="borde_variante">#C4D0E2</color>
+    <color name="contenedor_mas_bajo">#FFFFFF</color>
+    <color name="contenedor_bajo">#F0F5FE</color>
+    <color name="contenedor">#EAF1FC</color>
+    <color name="contenedor_alto">#E3ECFA</color>
+    <color name="contenedor_mas_alto">#DCE6F6</color>
+    <color name="superficie_brillante">#FFFFFF</color>
+    <color name="superficie_tenue">#D5DEEC</color>
+</resources>

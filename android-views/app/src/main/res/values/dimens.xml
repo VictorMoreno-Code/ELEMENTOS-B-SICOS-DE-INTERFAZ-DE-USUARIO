@@ -1,0 +1,9 @@
+<resources>
+    <!-- Espaciado consistente en toda la aplicación -->
+    <dimen name="espacio_pantalla">16dp</dimen>
+    <dimen name="espacio_tarjeta">16dp</dimen>
+    <dimen name="espacio_interno">12dp</dimen>
+    <dimen name="espacio_pequeno">8dp</dimen>
+    <dimen name="radio_tarjeta">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- El tema oscuro usa el mismo tema base; los colores cambian en values-night/colors.xml -->
+<resources>
+</resources>

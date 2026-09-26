@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SECCIÓN 2: BOTONES Y ACCIONES -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="@dimen/espacio_pantalla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la sección -->
+        <TextView
+            style="@style/Texto.TituloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sección 2: Botones y acciones" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Elementos que ejecutan una acción al tocarlos. Todos responden con un mensaje visible."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- Botón relleno, con contorno y de solo texto -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Tres niveles de énfasis: el relleno es la acción principal, el de contorno una acción secundaria y el de solo texto la acción de menor importancia."
+            app:titulo="Botón relleno, con contorno y de solo texto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Botón relleno -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRelleno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relleno" />
+
+                <!-- Botón con contorno -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContorno"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Contorno" />
+
+                <!-- Botón de solo texto -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTexto"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Texto" />
+            </LinearLayout>
+
+            <!-- Respuesta al pulsar -->
+            <TextView
+                android:id="@+id/tvRespuestaBasicos"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pulsa un botón para ver la respuesta" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Botón con ícono -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Los botones pueden llevar solo un ícono (compactos) o un ícono junto al texto (más claros). El corazón cambia de estado cada vez que lo tocas."
+            app:titulo="Botón con ícono">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Solo ícono (relleno) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIconoFavorito"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Favorito"
+                    app:icon="@drawable/ic_favorite" />
+
+                <!-- Solo ícono (contorno) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIconoEditar"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="Editar"
+                    app:icon="@drawable/ic_edit" />
+
+                <!-- Ícono más texto -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIconoTexto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Compartir"
+                    app:icon="@drawable/ic_share" />
+            </LinearLayout>
+
+            <!-- Respuesta al pulsar -->
+            <TextView
+                android:id="@+id/tvRespuestaIconos"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toca un botón con ícono" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Botón de acción flotante, normal y extendido -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="El botón flotante (FAB) destaca la acción principal de una pantalla. La versión extendida incluye texto; al tocarla se contrae y se vuelve a expandir."
+            app:titulo="Botón de acción flotante (normal y extendido)">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- FAB normal -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Agregar"
+                    app:srcCompat="@drawable/ic_add" />
+
+                <!-- FAB extendido -->
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/fabExtendido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="Nuevo"
+                    app:icon="@drawable/ic_add" />
+            </LinearLayout>
+
+            <!-- Respuesta al pulsar -->
+            <TextView
+                android:id="@+id/tvRespuestaFab"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toca uno de los botones flotantes" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Botón de alternancia (toggle) y selector segmentado -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="El selector segmentado permite elegir una sola opción entre varias visibles. El botón de alternancia cambia entre dos estados (activado y desactivado) cada vez que se toca."
+            app:titulo="Botón de alternancia y selector segmentado">
+
+            <!-- Selector segmentado -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoSegmentado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/btnDia"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/btnDia"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Día" />
+
+                <Button
+                    android:id="@+id/btnSemana"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semana" />
+
+                <Button
+                    android:id="@+id/btnMes"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mes" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Botón de alternancia -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAlternar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:checkable="true"
+                android:text="Recordatorio"
+                app:icon="@drawable/ic_notificaciones" />
+
+            <!-- Respuesta al pulsar -->
+            <TextView
+                android:id="@+id/tvRespuestaAlternancia"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vista elegida: Día" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Botón deshabilitado y botón en estado de carga -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="Un botón deshabilitado no responde al tocarlo. Un botón en carga bloquea la acción mientras se realiza una tarea y muestra un indicador de progreso."
+            app:titulo="Botón deshabilitado y botón en carga">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Botón deshabilitado -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDeshabilitado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Deshabilitado" />
+
+                <!-- Habilita o deshabilita el botón anterior -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCambiarEstado"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Habilitar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Botón en estado de carga -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar cambios" />
+
+                <!-- Indicador de carga (aparece al guardar) -->
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progresoBoton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorSize="28dp"
+                    app:trackThickness="3dp" />
+            </LinearLayout>
+
+            <!-- Respuesta al pulsar -->
+            <TextView
+                android:id="@+id/tvRespuestaEstados"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prueba habilitar el botón o guardar" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

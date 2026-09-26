@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafo de navegación: pantalla de inicio y las seis secciones -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <!-- Pantalla principal -->
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.outlook.victoreduardo.xml_ui.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <!-- Sección 1: Entrada de texto -->
+    <fragment
+        android:id="@+id/seccion1Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion1Fragment"
+        android:label="@string/menu_seccion1"
+        tools:layout="@layout/fragment_seccion1" />
+
+    <!-- Sección 2: Botones y acciones -->
+    <fragment
+        android:id="@+id/seccion2Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion2Fragment"
+        android:label="@string/menu_seccion2"
+        tools:layout="@layout/fragment_seccion2" />
+
+    <!-- Sección 3: Elementos de selección -->
+    <fragment
+        android:id="@+id/seccion3Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion3Fragment"
+        android:label="@string/menu_seccion3"
+        tools:layout="@layout/fragment_seccion3" />
+
+    <!-- Sección 4: Listas y colecciones -->
+    <fragment
+        android:id="@+id/seccion4Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion4Fragment"
+        android:label="@string/menu_seccion4"
+        tools:layout="@layout/fragment_seccion4" />
+
+    <!-- Sección 5: Información y retroalimentación -->
+    <fragment
+        android:id="@+id/seccion5Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion5Fragment"
+        android:label="@string/menu_seccion5"
+        tools:layout="@layout/fragment_seccion5" />
+
+    <!-- Sección 6: Contenedores y estructura -->
+    <fragment
+        android:id="@+id/seccion6Fragment"
+        android:name="com.outlook.victoreduardo.xml_ui.Seccion6Fragment"
+        android:label="@string/menu_seccion6"
+        tools:layout="@layout/fragment_seccion6" />
+</navigation>

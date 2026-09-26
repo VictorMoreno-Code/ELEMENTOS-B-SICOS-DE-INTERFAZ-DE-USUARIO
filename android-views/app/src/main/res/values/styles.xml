@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Campo de texto con contorno y esquinas redondeadas -->
+    <style name="Widget.UIViewcraft.CampoTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Campo con menú desplegable (lista desplegable y sugerencias) -->
+    <style name="Widget.UIViewcraft.CampoDesplegable" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Barra de búsqueda: campo totalmente redondeado -->
+    <style name="Widget.UIViewcraft.CampoBusqueda" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">28dp</item>
+        <item name="boxCornerRadiusTopEnd">28dp</item>
+        <item name="boxCornerRadiusBottomStart">28dp</item>
+        <item name="boxCornerRadiusBottomEnd">28dp</item>
+    </style>
+
+    <!-- Título de cada sección -->
+    <style name="Texto.TituloSeccion" parent="">
+        <item name="android:textAppearance">?attr/textAppearanceHeadlineSmall</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Texto de respuesta visible al interactuar con una demostración -->
+    <style name="Texto.Respuesta" parent="">
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Cajas de colores usadas en las demostraciones de contenedores -->
+    <style name="Caja.Demo" parent="">
+        <item name="android:background">@drawable/bg_caja</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

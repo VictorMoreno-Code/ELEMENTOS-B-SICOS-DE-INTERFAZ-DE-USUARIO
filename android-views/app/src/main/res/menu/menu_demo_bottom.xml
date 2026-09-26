@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Elementos de la barra de navegación inferior de demostración (Sección 6) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/demo_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/demo_favoritos"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favoritos" />
+    <item
+        android:id="@+id/demo_perfil"
+        android:icon="@drawable/ic_person"
+        android:title="Perfil" />
+</menu>

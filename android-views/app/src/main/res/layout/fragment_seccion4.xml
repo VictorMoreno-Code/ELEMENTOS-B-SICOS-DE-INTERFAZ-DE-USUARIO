@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SECCIÓN 4: LISTAS Y COLECCIONES -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="@dimen/espacio_pantalla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la sección -->
+        <TextView
+            style="@style/Texto.TituloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sección 4: Listas y colecciones" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Elementos para mostrar muchos datos de forma ordenada."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- Lista vertical (con detalle, deslizar para eliminar, actualizar y estado vacío) -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Lista con más de 15 elementos. Toca uno para ver su detalle, deslízalo a un lado para eliminarlo (puedes deshacer) y arrastra hacia abajo desde el inicio para actualizar. Lo que agregues en la Sección 1 aparece arriba."
+            app:titulo="Lista vertical">
+
+            <!-- Contador de elementos -->
+            <TextView
+                android:id="@+id/tvContador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorSecondary" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp">
+
+                <!-- Actualizar la lista arrastrando hacia abajo -->
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Lista vertical -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLista"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingBottom="4dp" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <!-- Estado vacío con mensaje e ilustración -->
+                <LinearLayout
+                    android:id="@+id/estadoVacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ilustracion_vacio" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="No hay elementos"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Eliminaste todos los elementos de la lista."
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRestaurar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Restaurar lista"
+                        app:icon="@drawable/ic_refresh" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Vaciar la lista para ver el estado vacío -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVaciar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Vaciar lista (ver estado vacío)"
+                app:icon="@drawable/ic_delete" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Cuadrícula de elementos -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Organiza los elementos en filas y columnas. Es útil para galerías, catálogos o accesos rápidos. Toca un mosaico para seleccionarlo."
+            app:titulo="Cuadrícula">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCuadricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvRespuestaCuadricula"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toca un mosaico" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Lista con encabezados de sección -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Una misma lista con dos tipos de elemento: encabezados que dividen los grupos y filas con la información. Desplázala para ver todos los grupos."
+            app:titulo="Lista con encabezados de sección">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAgrupada"
+                android:layout_width="match_parent"
+                android:layout_height="260dp" />
+
+            <TextView
+                android:id="@+id/tvRespuestaAgrupada"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toca una fila" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Pestañas con contenido deslizable -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="Las pestañas dividen el contenido en varias vistas. Toca una pestaña o desliza el contenido hacia los lados para cambiar de página."
+            app:titulo="Pestañas deslizables">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="190dp" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

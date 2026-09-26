@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Acciones de la barra superior principal -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Acerca de la aplicación -->
+    <item
+        android:id="@+id/action_acerca"
+        android:icon="@drawable/ic_info"
+        android:title="@string/accion_acerca_de"
+        app:showAsAction="ifRoom" />
+</menu>

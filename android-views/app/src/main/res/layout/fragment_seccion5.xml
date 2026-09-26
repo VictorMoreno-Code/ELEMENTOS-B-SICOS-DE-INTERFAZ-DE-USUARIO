@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SECCIÓN 5: INFORMACIÓN Y RETROALIMENTACIÓN -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="@dimen/espacio_pantalla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la sección -->
+        <TextView
+            style="@style/Texto.TituloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sección 5: Información y retroalimentación" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Elementos que muestran información o avisan al usuario de lo que pasa."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- Conexión con la Sección 3 -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Esta sección cambia según lo que elijas en la Sección 3: el interruptor «Modo detallado» muestra información adicional y el deslizador controla la barra de progreso lineal."
+            app:titulo="Conexión con la Sección 3">
+
+            <TextView
+                android:id="@+id/tvEstadoConexion"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIrSeccion3"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cambiar en la Sección 3" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Textos con distintos estilos, tamaños y énfasis -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="El texto puede cambiar de tamaño, grosor, inclinación y color para dar jerarquía a la información. Prueba los botones para modificar el texto de muestra."
+            app:titulo="Textos con distintos estilos">
+
+            <!-- Texto de muestra que cambia con los botones -->
+            <TextView
+                android:id="@+id/tvMuestra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Texto de muestra"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <!-- Énfasis: negrita, cursiva y subrayado -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoEstilos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNegrita"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Negrita" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCursiva"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cursiva" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubrayado"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subrayado" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Tamaño del texto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenos"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A-" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMas"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="A+" />
+
+                <TextView
+                    android:id="@+id/tvTamano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textAppearance="?attr/textAppearanceLabelLarge"
+                    android:textColor="?attr/colorSecondary" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Galería de estilos -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titular grande y en negritas"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Subtítulo de tamaño mediano"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Cuerpo de texto normal, ideal para párrafos y explicaciones largas."
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Nota pequeña en cursiva"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvSpans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Imagen local e imagen desde una URL -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Una imagen puede venir de los recursos de la app (local) o descargarse desde internet (URL). Cambia el modo de escalado para ver cómo se ajusta al espacio disponible."
+            app:titulo="Imagen local e imagen desde URL">
+
+            <!-- Modo de escalado -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupoEscala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/btnRecortar"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/btnRecortar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recortar" />
+
+                <Button
+                    android:id="@+id/btnAjustar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ajustar" />
+
+                <Button
+                    android:id="@+id/btnEstirar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estirar" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/tvModoEscala"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modo: recortar para llenar (centerCrop)" />
+
+            <!-- Imagen local -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Imagen local (recurso de la app)"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <ImageView
+                android:id="@+id/imgLocal"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/colorSurfaceVariant"
+                android:contentDescription="Imagen local del catálogo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_catalogo" />
+
+            <!-- Imagen desde URL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Imagen cargada desde una URL"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/colorSurfaceVariant">
+
+                <ImageView
+                    android:id="@+id/imgUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Imagen descargada de internet"
+                    android:scaleType="centerCrop" />
+
+                <!-- Indicador mientras se descarga -->
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progresoUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvEstadoUrl"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOtraImagen"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cargar otra imagen"
+                app:icon="@drawable/ic_refresh" />
+
+            <!-- Información adicional (solo en modo detallado) -->
+            <TextView
+                android:id="@+id/tvDetalleImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Modo detallado: la imagen local se redujo a 1200 px de ancho para no pesar de más; la imagen remota es de 800 × 450 px."
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorTertiary"
+                android:visibility="gone" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Indicadores de progreso -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Indican que algo está en curso. El modo determinado muestra el avance exacto; el indeterminado se usa cuando no se sabe cuánto falta. La barra lineal determinada refleja el deslizador de la Sección 3."
+            app:titulo="Indicadores de progreso">
+
+            <!-- Lineal determinado -->
+            <TextView
+                android:id="@+id/tvNivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/linealDeterminado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="8dp" />
+
+            <!-- Lineal indeterminado -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Lineal indeterminado"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:indeterminate="true"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="8dp" />
+
+            <!-- Circulares -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/circularDeterminado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:indicatorSize="56dp"
+                    app:trackThickness="6dp" />
+
+                <TextView
+                    android:id="@+id/tvPorcentajeSimulado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Circular determinado: 0 %"
+                    android:textAppearance="?attr/textAppearanceLabelLarge"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:indicatorSize="56dp"
+                    app:trackThickness="6dp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimular"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Simular carga" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Mensaje emergente (toast) y mensaje con acción (snackbar) -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="El toast es un aviso breve que desaparece solo. El snackbar aparece en la parte inferior y puede incluir una acción, como «Deshacer»."
+            app:titulo="Toast y Snackbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnToast"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar toast" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSnackbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Mostrar snackbar" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRespuestaMensajes"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toca un botón para ver el mensaje" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Diálogo de confirmación -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Ventana que interrumpe al usuario para pedirle una decisión importante, como confirmar una eliminación. Hay que responder para continuar."
+            app:titulo="Diálogo de confirmación">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDialogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abrir diálogo" />
+
+            <TextView
+                android:id="@+id/tvRespuestaDialogo"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sin respuesta todavía" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Hoja inferior (bottom sheet) -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Panel que sube desde la parte inferior con opciones adicionales, sin salir de la pantalla actual. Se cierra deslizándolo hacia abajo o tocando fuera."
+            app:titulo="Hoja inferior (bottom sheet)">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHoja"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abrir hoja inferior" />
+
+            <TextView
+                android:id="@+id/tvRespuestaHoja"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sin opción elegida" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Tarjeta, separador y distintivo numérico -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="La tarjeta agrupa información relacionada (tócala para marcarla), el separador divide contenido y el distintivo numérico (badge) indica cuántos avisos pendientes hay."
+            app:titulo="Tarjeta, separador y distintivo numérico">
+
+            <!-- Tarjeta seleccionable -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEjemplo"
+                style="?attr/materialCardViewFilledStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tarjeta de ejemplo"
+                        android:textAppearance="?attr/textAppearanceTitleSmall"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/tvEstadoTarjeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tócala para marcarla"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                    <!-- Información adicional (solo en modo detallado) -->
+                    <TextView
+                        android:id="@+id/tvDetalleTarjeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Modo detallado: esta línea solo aparece cuando activas el interruptor de la Sección 3."
+                        android:textAppearance="?attr/textAppearanceBodySmall"
+                        android:textColor="?attr/colorTertiary"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Separador -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Contenido de arriba"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divisorEjemplo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contenido de abajo"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swDivisor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:text="Mostrar separador" />
+
+            <!-- Distintivo numérico -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Avisos pendientes"
+                        android:src="@drawable/ic_notificaciones" />
+
+                    <TextView
+                        android:id="@+id/tvBadge"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/bg_badge"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="?attr/colorOnError"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSumarBadge"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="+1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReiniciarBadge"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Reiniciar" />
+            </LinearLayout>
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

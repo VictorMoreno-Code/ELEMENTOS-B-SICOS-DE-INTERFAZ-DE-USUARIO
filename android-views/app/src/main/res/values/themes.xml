@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base de UIViewcraft: Material 3 blanquiazul (claro y oscuro según el sistema) -->
+    <style name="Base.Theme.XMLUI" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/azul_primario</item>
+        <item name="colorOnPrimary">@color/azul_sobre_primario</item>
+        <item name="colorPrimaryContainer">@color/azul_contenedor</item>
+        <item name="colorOnPrimaryContainer">@color/azul_sobre_contenedor</item>
+        <item name="colorSecondary">@color/celeste</item>
+        <item name="colorOnSecondary">@color/celeste_sobre</item>
+        <item name="colorSecondaryContainer">@color/celeste_contenedor</item>
+        <item name="colorOnSecondaryContainer">@color/celeste_sobre_contenedor</item>
+        <item name="colorTertiary">@color/indigo</item>
+        <item name="colorOnTertiary">@color/indigo_sobre</item>
+        <item name="colorTertiaryContainer">@color/indigo_contenedor</item>
+        <item name="colorOnTertiaryContainer">@color/indigo_sobre_contenedor</item>
+
+        <!-- Fondos y superficies -->
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="colorOnBackground">@color/sobre_fondo</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/sobre_superficie</item>
+        <item name="colorSurfaceVariant">@color/superficie_variante</item>
+        <item name="colorOnSurfaceVariant">@color/sobre_superficie_variante</item>
+        <item name="colorOutline">@color/borde</item>
+        <item name="colorOutlineVariant">@color/borde_variante</item>
+        <item name="colorSurfaceContainerLowest">@color/contenedor_mas_bajo</item>
+        <item name="colorSurfaceContainerLow">@color/contenedor_bajo</item>
+        <item name="colorSurfaceContainer">@color/contenedor</item>
+        <item name="colorSurfaceContainerHigh">@color/contenedor_alto</item>
+        <item name="colorSurfaceContainerHighest">@color/contenedor_mas_alto</item>
+        <item name="colorSurfaceBright">@color/superficie_brillante</item>
+        <item name="colorSurfaceDim">@color/superficie_tenue</item>
+    </style>
+
+    <style name="Theme.XMLUI" parent="Base.Theme.XMLUI" />
+</resources>

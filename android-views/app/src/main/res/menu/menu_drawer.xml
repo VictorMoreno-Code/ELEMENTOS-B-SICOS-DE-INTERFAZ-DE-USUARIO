@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menú lateral: los ids coinciden con los destinos de nav_graph.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicioFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_inicio" />
+        <item
+            android:id="@+id/seccion1Fragment"
+            android:icon="@drawable/ic_edit"
+            android:title="@string/menu_seccion1" />
+        <item
+            android:id="@+id/seccion2Fragment"
+            android:icon="@drawable/ic_star"
+            android:title="@string/menu_seccion2" />
+        <item
+            android:id="@+id/seccion3Fragment"
+            android:icon="@drawable/ic_check"
+            android:title="@string/menu_seccion3" />
+        <item
+            android:id="@+id/seccion4Fragment"
+            android:icon="@drawable/ic_lista"
+            android:title="@string/menu_seccion4" />
+        <item
+            android:id="@+id/seccion5Fragment"
+            android:icon="@drawable/ic_info"
+            android:title="@string/menu_seccion5" />
+        <item
+            android:id="@+id/seccion6Fragment"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/menu_seccion6" />
+    </group>
+</menu>

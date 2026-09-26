@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SECCIÓN 1: ENTRADA DE TEXTO -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="@dimen/espacio_pantalla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la sección -->
+        <TextView
+            style="@style/Texto.TituloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sección 1: Entrada de texto" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Elementos con los que el usuario escribe información."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- Campo de texto simple con etiqueta o hint -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Campo básico con una etiqueta que sirve de guía. Escribe algo y agrégalo a la lista de la Sección 4 (conexión entre secciones)."
+            app:titulo="Campo de texto simple">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSimple"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escribe un nombre o una nota">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSimple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Eco del texto escrito -->
+            <TextView
+                android:id="@+id/tvEcoSimple"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escribiste: (nada todavía)" />
+
+            <!-- Botón que envía el texto a la lista de la Sección 4 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAgregarLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Agregar a la lista (Sección 4)"
+                app:icon="@drawable/ic_add" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Campo con validación y mensaje de error visible -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Comprueba lo que se escribe mientras se teclea y muestra un mensaje de error cuando el dato no es válido. Prueba con menos de 4 caracteres o con espacios."
+            app:titulo="Campo con validación">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilValidacion"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de usuario"
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:helperText="De 4 a 12 caracteres, sin espacios">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Campo de contraseña con opción para mostrar u ocultar el contenido -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Oculta lo que se escribe con puntos. Toca el ojo del extremo derecho para mostrar u ocultar la contraseña."
+            app:titulo="Campo de contraseña">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContrasena"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                app:endIconMode="password_toggle"
+                app:helperText="Mínimo 8 caracteres">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Campos con distintos tipos de teclado -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Cada campo abre un teclado distinto según el tipo de dato: numérico, de correo electrónico o de teléfono. El correo se valida al escribir."
+            app:titulo="Tipos de teclado">
+
+            <!-- Teclado numérico -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumerico"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número (teclado numérico)"
+                app:startIconDrawable="@drawable/ic_numero">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Teclado de correo electrónico -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorreo"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Correo electrónico"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Teclado de teléfono -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelefono"
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Teléfono"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Campo multilínea -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Permite escribir textos largos con varios renglones. El contador indica cuántos caracteres llevas del máximo permitido."
+            app:titulo="Campo multilínea">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.UIViewcraft.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comentarios"
+                app:counterEnabled="true"
+                app:counterMaxLength="200">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:maxLines="6"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Campo con sugerencias automáticas -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Mientras escribes, el campo propone opciones que coinciden con el texto. Escribe «Gua» o «Mon» y elige una sugerencia."
+            app:titulo="Campo con sugerencias automáticas">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.UIViewcraft.CampoDesplegable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciudad">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/acCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Sugerencia elegida -->
+            <TextView
+                android:id="@+id/tvCiudadElegida"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciudad elegida: (ninguna)" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Barra de búsqueda -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="Campo redondeado para buscar. Filtra la lista de ciudades mientras escribes; el botón X borra el texto y la lupa del teclado confirma la búsqueda."
+            app:titulo="Barra de búsqueda">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.UIViewcraft.CampoBusqueda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar ciudad"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBusqueda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Resultados de la búsqueda -->
+            <TextView
+                android:id="@+id/tvResultadosBusqueda"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

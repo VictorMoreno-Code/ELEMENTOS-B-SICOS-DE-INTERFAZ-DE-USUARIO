@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SECCIÓN 3: ELEMENTOS DE SELECCIÓN -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="@dimen/espacio_pantalla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la sección -->
+        <TextView
+            style="@style/Texto.TituloSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sección 3: Elementos de selección" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Elementos para elegir una o varias opciones."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- Casilla de verificación (con estado indeterminado) -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Permite marcar o desmarcar una opción. La casilla «Seleccionar todo» tiene tres estados: marcada, desmarcada e indeterminada (cuando solo algunas opciones están marcadas)."
+            app:titulo="Casilla de verificación">
+
+            <!-- Casilla simple -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbTerminos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acepto los términos y condiciones" />
+
+            <!-- Casilla principal con estado indeterminado -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbPadre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Seleccionar todos los avisos"
+                android:textStyle="bold" />
+
+            <!-- Casillas hijas -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbHijo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="Avisos por correo" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbHijo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:checked="true"
+                android:text="Avisos por mensaje SMS" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbHijo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="Avisos en la aplicación" />
+
+            <TextView
+                android:id="@+id/tvRespuestaCasillas"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Grupo de botones de opción -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Muestra varias opciones de las que solo se puede elegir una. Al elegir una, la anterior se desmarca automáticamente."
+            app:titulo="Botones de opción (radio)">
+
+            <RadioGroup
+                android:id="@+id/rgEnvio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbRapido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Envío rápido (1 día)" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbEstandar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Envío estándar (3 días)" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbEconomico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Envío económico (7 días)" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvRespuestaRadio"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elegiste: Envío estándar (3 días)" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Interruptor (switch) -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Activa o desactiva un ajuste al instante. El «Modo detallado» está conectado con la Sección 5: al activarlo, allá aparece información adicional."
+            app:titulo="Interruptor (switch)">
+
+            <!-- Interruptor conectado con la Sección 5 -->
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swDetallado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modo detallado (afecta a la Sección 5)" />
+
+            <!-- Interruptor independiente -->
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swNotificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Recibir notificaciones" />
+
+            <TextView
+                android:id="@+id/tvRespuestaSwitch"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Deslizador de valor único y deslizador de rango -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="El deslizador simple elige un valor y el de rango elige un mínimo y un máximo. El valor del deslizador simple se muestra como progreso en la Sección 5."
+            app:titulo="Deslizador simple y de rango">
+
+            <!-- Deslizador de valor único -->
+            <TextView
+                android:id="@+id/tvValorSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderUnico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:value="40"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+            <!-- Deslizador de rango -->
+            <TextView
+                android:id="@+id/tvValorRango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/sliderRango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:values="@array/rango_inicial" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Lista desplegable de selección -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Muestra una lista de opciones al tocar el campo y guarda la que elijas. Ocupa poco espacio cuando hay muchas opciones."
+            app:titulo="Lista desplegable">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.UIViewcraft.CampoDesplegable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carrera">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/acCarrera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvRespuestaCarrera"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Selector de fecha y selector de hora -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:descripcion="Abren un calendario o un reloj para elegir una fecha o una hora sin tener que escribirlas. El resultado aparece debajo."
+            app:titulo="Selector de fecha y de hora">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Selector de fecha -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFecha"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elegir fecha"
+                    app:icon="@drawable/ic_calendario" />
+
+                <!-- Selector de hora -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnHora"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Elegir hora"
+                    app:icon="@drawable/ic_reloj" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRespuestaFecha"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha: (sin elegir)" />
+
+            <TextView
+                android:id="@+id/tvRespuestaHora"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hora: (sin elegir)" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+
+        <!-- Chips de filtro seleccionables -->
+        <com.outlook.victoreduardo.xml_ui.TarjetaElemento
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="Etiquetas compactas que se pueden activar o desactivar para filtrar contenido. Puedes seleccionar varias a la vez."
+            app:titulo="Chips de filtro">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFiltros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="8dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compose" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flutter" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kotlin" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dart" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/tvRespuestaChips"
+                style="@style/Texto.Respuesta"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sin filtros activos" />
+        </com.outlook.victoreduardo.xml_ui.TarjetaElemento>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

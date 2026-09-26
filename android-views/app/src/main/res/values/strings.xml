@@ -1,0 +1,17 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">UIViewcraft</string>
+
+    <!-- Menú lateral y barra superior -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_seccion1">1. Entrada de texto</string>
+    <string name="menu_seccion2">2. Botones y acciones</string>
+    <string name="menu_seccion3">3. Elementos de selección</string>
+    <string name="menu_seccion4">4. Listas y colecciones</string>
+    <string name="menu_seccion5">5. Información y retroalimentación</string>
+    <string name="menu_seccion6">6. Contenedores y estructura</string>
+    <string name="accion_acerca_de">Acerca de</string>
+    <string name="abrir_menu">Abrir menú de navegación</string>
+    <string name="cerrar_menu">Cerrar menú de navegación</string>
+    <string name="encabezado_subtitulo">Catálogo de elementos de interfaz con Views y XML</string>
+</resources>

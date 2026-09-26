@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta azul marino: tema oscuro (mismos nombres que el tema claro) -->
+    <color name="azul_primario">#A8C7FA</color>
+    <color name="azul_sobre_primario">#062E6F</color>
+    <color name="azul_contenedor">#0842A0</color>
+    <color name="azul_sobre_contenedor">#D3E3FD</color>
+    <color name="celeste">#7FCFFF</color>
+    <color name="celeste_sobre">#003450</color>
+    <color name="celeste_contenedor">#004B70</color>
+    <color name="celeste_sobre_contenedor">#C9EBFF</color>
+    <color name="indigo">#B7C4FF</color>
+    <color name="indigo_sobre">#0A1F6B</color>
+    <color name="indigo_contenedor">#2C3E9E</color>
+    <color name="indigo_sobre_contenedor">#DDE4FF</color>
+    <color name="fondo">#0A1628</color>
+    <color name="sobre_fondo">#E3EAF6</color>
+    <color name="superficie">#0F1F38</color>
+    <color name="sobre_superficie">#E3EAF6</color>
+    <color name="superficie_variante">#2A3B57</color>
+    <color name="sobre_superficie_variante">#B6C3DA</color>
+    <color name="borde">#8090AA</color>
+    <color name="borde_variante">#34455F</color>
+    <color name="contenedor_mas_bajo">#071222</color>
+    <color name="contenedor_bajo">#0D1B31</color>
+    <color name="contenedor">#12233F</color>
+    <color name="contenedor_alto">#182B4A</color>
+    <color name="contenedor_mas_alto">#1F3457</color>
+    <color name="superficie_brillante">#22385C</color>
+    <color name="superficie_tenue">#0A1628</color>
+</resources>

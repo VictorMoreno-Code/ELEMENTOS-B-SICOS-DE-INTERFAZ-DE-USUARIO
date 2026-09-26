@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Acciones de la barra superior de demostración (Sección 6) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/demo_buscar"
+        android:icon="@drawable/ic_search"
+        android:title="Buscar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/demo_favorito"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorito"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/demo_compartir"
+        android:title="Compartir"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/demo_ayuda"
+        android:title="Ayuda"
+        app:showAsAction="never" />
+</menu>
